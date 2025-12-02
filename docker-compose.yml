@@ -1,0 +1,11 @@
+services:
+  webs:
+    image: olaranmmy/actionsclass:latest
+    ports:
+    - 1234:80
+
+  sonarqube:
+    image: sonarqube:community
+    ports:
+    - 9000:9000
+    
