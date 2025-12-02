@@ -21,11 +21,11 @@ jobs:
 
             - name: Build Docker Image
               run: | 
-                docker build -t theoafactor/actionsclass:1.0.2 .
+                docker build -t olaranmmy/actionsclass:latest .
 
             - name: Push to Docker Hub
               run: |
-                echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-                docker push theoafactor/actionsclass:1.0.2
+                echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+                docker push olaranmmy/actionsclass:latest
 
             
