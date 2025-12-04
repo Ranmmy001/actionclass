@@ -15,7 +15,7 @@ services:
     image: sonarsource/sonar-scanner-cli
     environment:
       - SONAR_HOST_URL=http://sonarqube:9000
-      - SONAR_TOKEN=Devops
+      - SONAR_TOKEN=sqp_fd00ceddff19aa8556b5e26b3ee4c178df62d632
     depends_on:
       - sonarqube
 

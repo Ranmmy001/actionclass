@@ -17,21 +17,11 @@ jobs:
               with:
                 fetch-depth: 0 
                 
-            - name: echo sonar token
-              run: | 
-                echo ${{ secrets.SONAR_TOKEN }}
-    
-                    
             - name: sonarqube
               uses: SonarSource/sonarqube-scan-action@v6
               env:
                 SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                 SONAR_HOST_URL: http://0.0.0.0:9000
-
-                
-
-
-              
             
             - name: "List the project directory"
               run: |
