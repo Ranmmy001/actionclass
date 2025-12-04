@@ -8,4 +8,17 @@ services:
     image: sonarqube:community
     ports:
     - 9000:9000
+    depends_on:
+      - webs
+
+  sonarScan:
+    image: sonarsource/sonar-scanner-cli
+    environment:
+      - SONAR_HOST_URL=http://sonarqube:9000
+      - SONAR_TOKEN=Devops
+    depends_on:
+      - sonarqube
+
+
+
     
